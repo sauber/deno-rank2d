@@ -1,8 +1,10 @@
-// Input
+/** Format of input data */
 export type DataSet = Array<Cell>;
 
-// Output
+/** A line may have Cells with content or without */
 export type Line = Array<Cell | null>;
+
+/** Format of output data */
 export type Table = Array<Line>;
 
 type Position = {
@@ -81,6 +83,7 @@ class Slot {
 
 ////////////////////////////////////////////////////////////////////////
 
+/** Positioning of ranked items in a grid */
 export class Rank2D {
   private readonly matrix: Matrix;
   private readonly colcount: number;
@@ -90,6 +93,9 @@ export class Rank2D {
   private readonly ymin: number;
   private readonly ymax: number;
 
+  /**
+   * @param list - List of cells {x: number, y: number, item: any}
+   */
   constructor(list: DataSet) {
     this.matrix = Rank2D.generateMatrix(list);
 
