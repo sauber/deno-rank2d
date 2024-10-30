@@ -1,0 +1,13 @@
+{
+  "name": "@sauber/rank2d",
+  "version": "0.1.0",
+  "exports": "./mod.ts",
+  "lock": false,
+  "publish": {
+    "exclude": ["src/*.test.ts"],
+    "include": ["LICENSE", "README.md", "mod.ts", "example.ts", "src/*.ts"]
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@^1.0.6"
+  }
+}
